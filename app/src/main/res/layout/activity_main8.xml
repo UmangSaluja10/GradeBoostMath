@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity8"
+    android:background="@drawable/home_background">
+    <ImageView
+        android:id="@+id/image_logo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/aboutpg_back"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:textColor="@color/white"
+        android:fontFamily="cursive"
+        android:text="Calculator"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_logo" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardV"
+        android:layout_width="350dp"
+        android:layout_height="400dp"
+        android:backgroundTint="#96A094"
+        app:cardCornerRadius="40dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <EditText
+                android:id="@+id/inputField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-black"
+                android:hint="Enter a Number"
+                android:textColor="#2E3130"
+                android:textColorHint="#2E3130"
+                android:inputType="numberDecimal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/constraint" />
+
+            <Button
+                android:id="@+id/addButton"
+                android:layout_width="155dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="40dp"
+                android:backgroundTint="#237668"
+                android:text="Addition"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputField" />
+
+            <Button
+                android:id="@+id/subButton"
+                android:layout_width="155dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="#237668"
+                android:text="Subtraction"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputField" />
+
+            <Button
+                android:id="@+id/mulButton"
+                android:layout_width="155dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:backgroundTint="#237668"
+                android:text="Multiplication"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addButton" />
+
+            <Button
+                android:id="@+id/divButton"
+                android:layout_width="155dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="12dp"
+                android:backgroundTint="#237668"
+                android:text="Division"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/subButton" />
+
+            <TextView
+                android:id="@+id/resultView"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="200dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="Result:0"
+                android:textColor="#2E3130"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputField" />
+
+            <Button
+                android:id="@+id/clearButton"
+                android:layout_width="155dp"
+                android:layout_height="50dp"
+                android:backgroundTint="#237668"
+                android:text="Clear"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/resultView"
+                app:layout_constraintVertical_bias="0.244" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#05FFFFFF"
+        android:scaleType="centerInside"
+        android:src="@drawable/home3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/imageButton2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardV"
+        app:layout_constraintVertical_bias="0.892" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#05FFFFFF"
+        android:scaleType="centerInside"
+        android:src="@drawable/calcactive"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/imageButton3"
+        app:layout_constraintStart_toEndOf="@id/imageButton1"
+        app:layout_constraintTop_toBottomOf="@id/cardV"
+        app:layout_constraintVertical_bias="0.892" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#05FFFFFF"
+        android:scaleType="centerInside"
+        android:src="@drawable/about3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageButton2"
+        app:layout_constraintTop_toBottomOf="@id/cardV"
+        app:layout_constraintVertical_bias="0.892" />
+</androidx.constraintlayout.widget.ConstraintLayout>
